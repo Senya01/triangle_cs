@@ -36,6 +36,10 @@ namespace programm15._03
         {
             reset();
 
+            if (textBox1.Text == "" && textBox2.Text == "" && textBox3.Text == "")
+                return;
+
+
             int a = Convert.ToInt32(textBox1.Text);
             int b = Convert.ToInt32(textBox2.Text);
             int c = Convert.ToInt32(textBox3.Text);
@@ -82,6 +86,33 @@ namespace programm15._03
             }
 
             label9.Text = "Вид: " + type;
+        }
+
+        private void textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit((char)e.KeyChar);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox2.Clear();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox3.Clear();
         }
     }
 }
