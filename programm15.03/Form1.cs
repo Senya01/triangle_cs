@@ -62,7 +62,7 @@ namespace programm15._03
             }
             if (a == b || a == c || b == c)
             {
-                label6.Text = "Треугольник равнобедренных";
+                label6.Text = "Треугольник равнобедренный";
             }
             else
             {
